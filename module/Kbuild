@@ -1,0 +1,9 @@
+# AMD is the drivers/gpu/drm/amd directory of the running kernel's source;
+# the include paths are those of amdgpu's own Makefile.
+obj-m := bc250_metrics_fix.o
+ccflags-y := -I$(AMD)/include/asic_reg -I$(AMD)/include -I$(AMD)/amdgpu \
+	-I$(AMD)/pm/inc -I$(AMD)/pm/swsmu/inc -I$(AMD)/pm/swsmu/inc/pmfw_if \
+	-I$(AMD)/acp/include -I$(AMD)/display -I$(AMD)/display/include \
+	-I$(AMD)/display/modules/inc -I$(AMD)/display/dc \
+	-I$(AMD)/display/amdgpu_dm -I$(AMD)/amdkfd -I$(AMD)/ras/ras_mgr \
+	-I$(AMD)/ras/rascore
